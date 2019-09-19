@@ -14,6 +14,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.MatrixParam;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.QueryParam;
 
 /**
  * REST Web Service
@@ -39,7 +40,7 @@ public class Show {
      */
     @GET
     @Produces("text/html")
-    public String getHtml(@MatrixParam("title") String title, @MatrixParam("quant") int quant) {
+    public String getHtml(@QueryParam("banda") String title, @QueryParam("qtdIngressos") int quant) {
         String msg = "";
         if (title.equals("Metallica")) {
             float total = 350 * quant;

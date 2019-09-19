@@ -30,6 +30,7 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(rs.Show.class);
+        resources.add(rs.ShowRock.class);
         resources.add(rs.Soma.class);
     }
     

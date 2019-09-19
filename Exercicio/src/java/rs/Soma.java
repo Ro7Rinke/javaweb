@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.MatrixParam;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 
 /**
  * REST Web Service
@@ -38,8 +39,8 @@ public class Soma {
     @GET
     @Produces("text/html")
     public String
-            getHtml(@MatrixParam("tipo") String tipo, @MatrixParam("number1") int number1,
-                    @MatrixParam("number2") int number2) {
+            getHtml(@QueryParam("tipo") String tipo, @QueryParam("number1") int number1,
+                    @QueryParam("number2") int number2) {
         double op = 0;
         String msg = null;
         switch (tipo) {
